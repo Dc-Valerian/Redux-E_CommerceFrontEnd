@@ -47,7 +47,20 @@ const Header = () => {
 export default Header
 const Circle = styled.div``
 
-const Icon = styled.div``
+const Icon = styled.div`
+display:flex;
+align-items:center;
+margin-right:20px;
+transition:all 350ms;
+height:100%;
+justify-content:center;
+width:40px;
+cursor: pointer;
+font-size:20px;
+:hover{
+    background-color:rgba(0,0,2,0.3) ;
+}
+`
 
 
 const IconHold = styled.div`
@@ -64,9 +77,16 @@ align-items:center;
 display:flex;
 `
 
-const Icons = styled.div``
+const Icons = styled.div`
+margin-right:5px;
+`
 
-const Third = styled.div``
+const Third = styled.div`
+display:flex;
+align-items:center;
+margin-right:10px;
+height:100% ;
+`
 
 const Second = styled.div`
 height:30px;
@@ -83,8 +103,7 @@ input{
     outline:none;
    ::placeholder{
     color:grey;
-    font-size:12px ;
-  
+    font-size:12px;
   }
 }
 `
