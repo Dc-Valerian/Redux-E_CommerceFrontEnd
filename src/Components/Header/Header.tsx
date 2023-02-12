@@ -32,11 +32,10 @@ const Header = () => {
                         <AiOutlineNotification/>
                     </Icon>
                     
-                    <Icon>
+                   
                         <Circle>
-                            Vc
+                            V
                         </Circle>
-                    </Icon>
                 </Third>
             </Head>
         </Container>
@@ -45,7 +44,17 @@ const Header = () => {
 }
 
 export default Header
-const Circle = styled.div``
+const Circle = styled.div`
+height:30px;
+width:30px;
+border:1px solid white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-right:30px;
+cursor: pointer;
+`
 
 const Icon = styled.div`
 display:flex;
