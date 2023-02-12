@@ -19,7 +19,7 @@ const Header = () => {
                     <IconHold>
                         <VscSearch/>
                     </IconHold>
-                    <Input placeholder="...Search"/>
+                    <input type="search" placeholder=".....Search......"/>
                 </Second>
                 <Third>
                     <Icon>
@@ -49,27 +49,65 @@ const Circle = styled.div``
 
 const Icon = styled.div``
 
-const Input = styled.div``
 
-const IconHold = styled.div``
+const IconHold = styled.div`
+color:black;
+font-size:20px;
+padding:5px ;
+margin-top:7px ;
+cursor: pointer;
+`
 
-const Title = styled.div``
+const Title = styled.div`
+margin: 5px;
+align-items:center;
+display:flex;
+`
 
 const Icons = styled.div``
 
 const Third = styled.div``
 
-const Second = styled.div``
+const Second = styled.div`
+height:30px;
+width:300px;
+background-color: #fff;
+align-items:center;
+display:flex;
+border-radius:5px;
+
+input{
+    width:250px;
+    padding:5px;
+    border:none;
+    outline:none;
+   ::placeholder{
+    color:grey;
+    font-size:12px ;
+  
+  }
+}
+`
 
 const First = styled.div`
 display: flex;
+align-items:center;
+margin-left:40px;
+cursor: pointer;
+font-size: 20px;
 `
 
 const Head = styled.div`
-display:flex ;
+display:flex;
 width:100%;
 height:60px;
-
+background-color:#3636e5;
+color:white;
+display: flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+z-index:10
 `
 
 const Container = styled.div``
