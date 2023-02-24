@@ -39,7 +39,16 @@ const Header = () => {
 
 export default Header
 const Count = styled.div`
-margin: 3px;
+/* margin: 3px; */
+height: 15px;
+width: 15px;
+border-radius: 50%;
+background-color: lightblue;
+font-size: 10px;
+justify-content: center;
+display: flex;
+align-items: center;
+color: white;
 `
 
 const Button = styled.button`
@@ -120,10 +129,14 @@ display: flex;
 `
 
 const Container = styled.div`
-background-color: whitesmoke;
 height: 70px;
 width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+position: sticky;
+	background-color: whitesmoke;
+	top: 0;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+		rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 `
