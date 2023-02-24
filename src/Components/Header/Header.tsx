@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import {AiOutlineDown,AiOutlineShoppingCart} from "react-icons/ai"
+import {BsSearch} from "react-icons/bs"
 
 const Header = () => {
   return (
@@ -7,16 +9,28 @@ const Header = () => {
         <Container>
             <Wrapper>
                <Logo>
-                Valerian
+                VALERIAN.
                </Logo>
 
                <NavHold>
-                <Nav>Home</Nav>
-                <Nav>Home</Nav>
-                <Nav>Home</Nav>
-                <Nav>Home</Nav>
-                <Nav>Home</Nav>
+                <Nav>Home
+                    <Icn><AiOutlineDown/></Icn>
+                </Nav>
+                <Nav>About</Nav>
+                <Nav>Services</Nav>
+                <Nav>Products</Nav>
                </NavHold>
+
+               <IconHold>
+                <Icon>
+                    <BsSearch/>
+                </Icon>
+                <Icon>
+                    <AiOutlineShoppingCart/>
+                    <Count>0</Count>
+                </Icon>
+               <Button>Get Started</Button>
+               </IconHold>
             </Wrapper>
         </Container>
     </div>
@@ -24,23 +38,89 @@ const Header = () => {
 }
 
 export default Header
-const Nav = styled.div``
+const Count = styled.div`
+margin: 3px;
+`
 
-const NavHold = styled.div``
+const Button = styled.button`
+height: 40px;
+	width: 120px;
+	background-color: #123456;
+	color: white;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	transition: all 350ms;
+	cursor: pointer;
+	margin-left: 40px;
 
-const Logo = styled.div``
+	:hover {
+		background-color: whitesmoke;
+		color: black;
+		transform: scale(0.98);
+	}
+`
+
+const Icon = styled.div`
+margin: 13px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+const IconHold = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+display: flex;
+`
+const Icn = styled.div`
+margin-top: 9px;
+`
+
+const Nav = styled.div`
+margin: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+`
+
+const NavHold = styled.div`
+display: flex;
+`
+
+const Logo = styled.div`
+height: 45px;
+	color: white;
+	object-fit: contain;
+	width: 120px;
+	background-color: #123456;
+	font-weight:bolder ;
+	font-style:italic ;
+	justify-content:center ;
+	display:flex ;
+	align-items:center ;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 10px;
+	:hover{
+		color: black;
+	}
+`
 
 const Wrapper = styled.div`
-background-color: red;
-width: 80%;
+/* background-color: red; */
+width: 85%;
 height: 100%;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 display: flex;
 `
 
 const Container = styled.div`
-background-color: black;
+background-color: whitesmoke;
 height: 70px;
 width: 100%;
 display: flex;
