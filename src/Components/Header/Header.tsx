@@ -2,8 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import {AiOutlineDown,AiOutlineShoppingCart} from "react-icons/ai"
 import {BsSearch} from "react-icons/bs"
+import {CiCircleRemove} from "react-icons/ci"
+import {GiHamburgerMenu} from "react-icons/gi"
+
 
 const Header = () => {
+	const [toggle,setToggle] = React.useState(false)
+
+	const showNavSide =()=>{
+		setToggle(!toggle)
+	}
+	const removeNavSide =()=>{
+		setToggle(false)
+	}
   return (
     <div>
         <Container>
@@ -31,6 +42,15 @@ const Header = () => {
                 </Icon>
                <Button>Get Started</Button>
                </IconHold>
+
+			   {
+				toggle?<HamburgerMenu onClick ={removeNavSide}>
+					<CiCircleRemove/>
+				</HamburgerMenu>:
+				<HamburgerMenu onClick ={removeNavSide}>
+				<GiHamburgerMenu/>
+			</HamburgerMenu>
+			   }
             </Wrapper>
         </Container>
     </div>
@@ -38,6 +58,7 @@ const Header = () => {
 }
 
 export default Header
+const HamburgerMenu = styled.div``
 const Count = styled.div`
 /* margin: 3px; */
 height: 15px;
@@ -68,6 +89,10 @@ height: 40px;
 		color: black;
 		transform: scale(0.98);
 	}
+
+	@media screen and (max-width:500px){
+	display: none;
+}
 `
 
 const Icon = styled.div`
@@ -98,6 +123,10 @@ cursor: pointer;
 
 const NavHold = styled.div`
 display: flex;
+
+@media screen and (max-width:500px){
+	display: none;
+}
 `
 
 const Logo = styled.div`
