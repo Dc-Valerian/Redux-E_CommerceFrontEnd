@@ -2,7 +2,18 @@ import React from 'react'
 import {AiOutlineMan} from "react-icons/ai"
 import styled from 'styled-components'
 import img1 from "../Assets/spider.jpg"
+import img8 from "../Assets/spider2.jpg"
+import img9 from "../Assets/spider3.jpg"
 import img2 from "../Assets/pray.png"
+import img3 from "../Assets/shazam.jpg"
+import img4 from "../Assets/world.jpg"
+import img5 from "../Assets/pexel.jpg"
+import img6 from "../Assets/dark.jpg"
+import img10 from "../Assets/bro.jpg"
+import img11 from "../Assets/bu.jpg"
+import img12 from "../Assets/nice.jpg"
+import img13 from "../Assets/nicepexel.jpg"
+import img14 from "../Assets/risk.jpg"
 
 const Expolore = () => {
   return (
@@ -33,6 +44,132 @@ const Expolore = () => {
                     </Hold>
                 </ExploreHold>
                 <CardHold>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img1}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img6}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img8}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img3}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img9}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img4}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img1}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img5}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img1}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img6}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img1}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img10}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
                     <Card>
                         <First>
                             <Circle>
