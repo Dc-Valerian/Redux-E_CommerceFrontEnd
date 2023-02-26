@@ -98,25 +98,26 @@ color: white;
 `
 
 const Button = styled.button`
-height: 40px;
-	width: 120px;
-	background-color: #123456;
-	color: white;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-	transition: all 350ms;
-	cursor: pointer;
-	margin-left: 40px;
+cursor: pointer;
+height: 50px;
+width: 135px;
+align-items: center;
+justify-content: center;
+display: flex;
+background-color: #123456;
+color: white;
+border-radius: 40px;
+outline: none;
+border: none;
+transition: all 350ms;
 
-	:hover {
-		background-color: whitesmoke;
-		color: black;
-		transform: scale(0.98);
-	}
-
-	@media screen and (max-width:500px){
-	display: none;
+:hover{
+  background-color: transparent;
+  color: black;
+  transform: scale(0.98);
+}
+@media screen and (max-width:500px){
+display: none;
 }
 `
 

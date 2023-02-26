@@ -35,17 +35,46 @@ const Hero = () => {
 }
 
 export default Hero
-const Button = styled.button``
+const Button = styled.button`
+cursor: pointer;
+height: 50px;
+width: 150px;
+align-items: center;
+justify-content: center;
+display: flex;
+background-color: #123456;
+color: white;
+border-radius: 40px;
+outline: none;
+border: none;
+transition: all 350ms;
 
-const Title = styled.div``
+:hover{
+  background-color: transparent;
+  color: black;
+  transform: scale(0.98);
+}
+`
 
-const Heading = styled.div``
+const Title = styled.div`
+font-size: 30px;
+`
 
-const Img = styled.div``
+const Heading = styled.div`
+font-size: 60px;
+font-weight: 900;
+margin-bottom: 10px;
+`
 
-const Second = styled.img``
 
-const First = styled.div``
+const Second = styled.img`
+object-fit: contain;
+width: 670px;
+`
+
+const First = styled.div`
+margin-right: 10px;
+`
 
 const Container = styled.div`
 width: 100%;
