@@ -9,7 +9,7 @@ const Discover = () => {
     <div>
         <Container>
             <Head>
-                Discover More.
+                Discover More.{" "}
                 <span>Good Things are waiting for you</span>
             </Head>
             <CardHolder>
