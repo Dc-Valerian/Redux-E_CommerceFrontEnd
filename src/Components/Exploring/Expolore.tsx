@@ -1,5 +1,8 @@
 import React from 'react'
-import {AiOutlineMan} from "react-icons/ai"
+import {AiOutlineMan, AiOutlineWoman} from "react-icons/ai"
+import {FaChild} from "react-icons/fa"
+import {MdSportsBaseball} from "react-icons/md"
+import {GiJewelCrown} from "react-icons/gi"
 import styled from 'styled-components'
 import img1 from "../Assets/spider.jpg"
 import img8 from "../Assets/spider2.jpg"
@@ -27,19 +30,19 @@ const Expolore = () => {
                         Valerian
                     </Hold>
                     <Hold>
-                        <span><AiOutlineMan/></span>                        
+                        <span><AiOutlineWoman/></span>                        
                         Pedro
                     </Hold>
                     <Hold>
-                        <span><AiOutlineMan/></span>                        
+                        <span><FaChild/></span>                        
                         Codelab
                     </Hold>
                     <Hold>
-                        <span><AiOutlineMan/></span>                        
+                        <span><MdSportsBaseball/></span>                        
                         Divine
                     </Hold>
                     <Hold>
-                        <span><AiOutlineMan/></span>                        
+                        <span><GiJewelCrown/></span>                        
                         Adimike
                     </Hold>
                 </ExploreHold>
@@ -82,48 +85,6 @@ const Expolore = () => {
                                 <Sub>See Collections</Sub>
                             </Title>
                             <SecImage>
-                                <Img2 src={img3}/>
-                            </SecImage>
-                        </Second>
-                    </Card>
-                    <Card>
-                        <First>
-                            <Circle>
-                                <Img src={img9}/>
-                            </Circle>
-                            <span>12 Products</span>
-                        </First>
-                        <Second>
-                            <Title>
-                                <h4>Manufacturer</h4>
-                                <h2>Shoe</h2>
-                                <br />
-                                <br />
-                                <br />
-                                <Sub>See Collections</Sub>
-                            </Title>
-                            <SecImage>
-                                <Img2 src={img4}/>
-                            </SecImage>
-                        </Second>
-                    </Card>
-                    <Card>
-                        <First>
-                            <Circle>
-                                <Img src={img1}/>
-                            </Circle>
-                            <span>12 Products</span>
-                        </First>
-                        <Second>
-                            <Title>
-                                <h4>Manufacturer</h4>
-                                <h2>Shoe</h2>
-                                <br />
-                                <br />
-                                <br />
-                                <Sub>See Collections</Sub>
-                            </Title>
-                            <SecImage>
                                 <Img2 src={img5}/>
                             </SecImage>
                         </Second>
@@ -145,7 +106,49 @@ const Expolore = () => {
                                 <Sub>See Collections</Sub>
                             </Title>
                             <SecImage>
-                                <Img2 src={img6}/>
+                                <Img2 src={img4}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img9}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img12}/>
+                            </SecImage>
+                        </Second>
+                    </Card>
+                    <Card>
+                        <First>
+                            <Circle>
+                                <Img src={img8}/>
+                            </Circle>
+                            <span>12 Products</span>
+                        </First>
+                        <Second>
+                            <Title>
+                                <h4>Manufacturer</h4>
+                                <h2>Shoe</h2>
+                                <br />
+                                <br />
+                                <br />
+                                <Sub>See Collections</Sub>
+                            </Title>
+                            <SecImage>
+                                <Img2 src={img14}/>
                             </SecImage>
                         </Second>
                     </Card>
@@ -166,7 +169,7 @@ const Expolore = () => {
                                 <Sub>See Collections</Sub>
                             </Title>
                             <SecImage>
-                                <Img2 src={img10}/>
+                                <Img2 src={img13}/>
                             </SecImage>
                         </Second>
                     </Card>
@@ -187,7 +190,7 @@ const Expolore = () => {
                                 <Sub>See Collections</Sub>
                             </Title>
                             <SecImage>
-                                <Img2 src={img2}/>
+                                <Img2 src={img11}/>
                             </SecImage>
                         </Second>
                     </Card>
