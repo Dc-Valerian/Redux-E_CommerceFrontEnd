@@ -42,15 +42,27 @@ const Header = () => {
                 </Icon>
                <Button>Get Started</Button>
                </IconHold>
-
+{/* 
 			   {
-				toggle?<HamburgerMenu onClick ={removeNavSide}>
+				toggle?<span onClick ={removeNavSide}>
 					<CiCircleRemove/>
-				</HamburgerMenu>:
+				</span>:
 				<HamburgerMenu onClick ={removeNavSide}>
 				<GiHamburgerMenu/>
 			</HamburgerMenu>
 			   }
+			   {
+				toggle ?
+				<Wrap>
+					 <NavHold>
+                <Nav>Home
+                </Nav>
+                <Nav>About</Nav>
+                <Nav>Services</Nav>
+                <Nav>Products</Nav>
+               </NavHold>
+				</Wrap>:null
+			   } */}
             </Wrapper>
         </Container>
     </div>
@@ -58,7 +70,20 @@ const Header = () => {
 }
 
 export default Header
-const HamburgerMenu = styled.div``
+const Wrap = styled.div`
+background-color:#123456;
+
+`
+
+const HamburgerMenu = styled.div`
+cursor: pointer;
+font-size: 30px;
+display: flex;
+
+@media screen and (max-width:500px) {
+	display: none;
+}
+`
 const Count = styled.div`
 /* margin: 3px; */
 height: 15px;
