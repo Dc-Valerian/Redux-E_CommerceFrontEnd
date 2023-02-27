@@ -1,80 +1,70 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface UserData {
 	name: string;
 	email: string;
 	password: string;
-	_id: string;
+	confirmPassword: string
 }
 
 interface CartData {
 	title: string;
 	desc: string;
 	price: number;
-	category: string;
+	CartQuantity: number;
 	_id: string;
-	cartQuantity: number;
+	category: string;
 }
 
 const initialState = {
-	currentUser: {} as UserData | null,
+	currentUser : {} as UserData | null,
 	cart: [] as Array<CartData>,
 	totalPrice: 0,
-	totalQuantity: 0,
-};
+	totalQuantity: 0
+}
 
 const ReduxState = createSlice({
-	name: "ecomerce",
-	initialState,
-	reducers: {
-		loginUser: (state, { payload }: PayloadAction<UserData>) => {
-			state.currentUser = payload;
-		},
-
-		logoutUser: (state) => {
-			state.currentUser = null;
-		},
-
-		addToCart: (state, { payload }: PayloadAction<CartData>) => {
-			const check = state.cart.findIndex((el) => el._id === payload._id);
-
-			if (check >= 0) {
-				state.cart[check].cartQuantity += 1;
-			} else {
-				state.cart.push({
-					...payload,
-					cartQuantity: 1,
-				});
-			}
-			//
-			state.totalQuantity += 1;
-			// state.totalPrice +=
-			// state.cart[check].cartQuantity * state.cart[check].price;
-			// state.totalPrice = state.cart.reduce(
-			// (accc, next) => accc + next.cartQuantity * next.price,
-			// 0,
-			// );
-		},
-
-		removeFromCart: (state, { payload }: PayloadAction<CartData>) => {
-			const check = state.cart.findIndex((el) => el._id === payload._id);
-
-			if (state.cart[check].cartQuantity > 1) {
-				state.cart[check].cartQuantity -= 1;
-			} else {
-				state.cart = state.cart.filter((el) => el._id !== payload._id);
-			}
-
-			state.totalQuantity -= 1;
-			// ;
-
-			// console.log("this is filter", check);
-		},
+  name: "First-Ecommerce",
+  initialState,
+  reducers: {
+	UserLogin: (state, {payload}: PayloadAction<UserData>) =>{
+		state.currentUser = payload
 	},
+	UserLogOut: (state) =>{
+		state.currentUser = null
+	},
+	addToCart : (state, {payload}: PayloadAction<CartData>) =>{
+		const CheckPosition = state.cart.findIndex((position) => position._id === payload._id)
+
+		if (CheckPosition >= 0) {
+			state.cart[CheckPosition].CartQuantity += 1
+		} else {
+			state.cart.push({
+				...payload,
+				CartQuantity: 1
+			})
+		}
+		state.totalQuantity += 1
+	},
+	removeFromCart: (state, {payload}: PayloadAction<CartData>) =>{
+		const outOfCart = state.cart.findIndex((position) =>
+			position._id === payload._id
+		)
+
+		if (state.cart[outOfCart].CartQuantity > 1) {
+			state.cart[outOfCart].CartQuantity -= 1
+		} else {
+			state.cart = state.cart.filter((out) => out._id !== payload._id)
+		}
+		state.totalQuantity -= 1
+	},
+	clearCart: (state) =>{
+		state.cart = [];
+		state.totalQuantity = 0
+	},
+  }
 });
 
-export const { loginUser, logoutUser, addToCart, removeFromCart } =
-	ReduxState.actions;
+export const { UserLogin, UserLogOut, addToCart, clearCart, removeFromCart } = ReduxState.actions
 
-export default ReduxState.reducer;
+export default ReduxState.reducer

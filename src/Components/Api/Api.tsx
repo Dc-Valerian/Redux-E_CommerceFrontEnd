@@ -1,27 +1,24 @@
 import axios from "axios";
 
-const Endpoint = "http://localhost:3020";
 interface UserData {
-	name: string;
-	email: string;
-	password: string;
+    name: string,
+    email: string,
+    password: string,
+    confirmPassword: string
 }
 
-export const CreateUser = async ({ name, email, password }: UserData) => {
-	return await axios
-		.post(`${Endpoint}/api/register`, {
-			name,
-			email,
-			password,
-		})
-		.then((res) => res.data);
-};
+const Endpoint = "http://localhost:4573/api"
 
-export const AllProduct = async () => {
-	return await axios.get(`${Endpoint}/api/products`).then((res) => res.data);
-};
-export const SingleProduct = async (id: any) => {
-	return await axios
-		.get(`${Endpoint}/api/products/${id}`)
-		.then((res) => res.data);
-};
+export const CreateNewUser = async({name, email, password, confirmPassword}: UserData) =>{
+    return await axios.post(`${Endpoint}/register`,{name, email, password,confirmPassword}).then((res) => res.data)
+}
+
+// Get all products:
+export const GetAllProducts = async() =>{
+    return await axios.get(`${Endpoint}/all-products`).then((res) => res.data)
+}
+
+// Get single products:
+export const SingleProducts = async(productID: any) =>{
+    return await axios.get(`${Endpoint}/all-products/${productID}`).then((res) => res.data)
+}

@@ -1,35 +1,42 @@
-import React from "react";
-import { useRoutes } from "react-router-dom";
-import CartPage from "../CartPage/CartPage";
-import Products from "../Products/Products";
-import Register from "../Register/Register";
-import SinglePage from "../SinglePage/SinglePage";
-import HomeScreen from "../HomeScreen/HomeScreen"
+import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import Login from '../Auth/Login'
+import SignUp from '../Auth/SignUp'
+import Cart from '../Cart/Cart'
+import AllProducts from '../DetailScreen/AllProducts'
+import ProductDetails from '../DetailScreen/ProductDetails'
+import Home from '../Home/Home'
+import HomeScreen from '../Homescreen/HomeScreen'
 
 const AllRoutes = () => {
-	let element = useRoutes([
-		{
-			path: "/",
-			element: <HomeScreen />,
-		},
-		{
-			path: "/details/:id",
-			element: <SinglePage />,
-		},
-		{
-			path: "/cart",
-			element: <CartPage />,
-		},
-		{
-			path: "/product",
-			element: <Products />,
-		},
-		{
-			path: "/register",
-			element: <Register />,
-		},
-	]);
-	return element;
-};
 
-export default AllRoutes;
+    const element = useRoutes([
+        {
+            path: "/",
+            element: <HomeScreen />
+        },
+        {
+            path: "/signup",
+            element: <SignUp />
+        },
+        {
+            path: "/login",
+            element: <Login />
+        },
+        {
+            path: "/all-products",
+            element: <AllProducts />
+        },
+        {
+            path: "/productdetails/:productID",
+            element: <ProductDetails />
+        },
+        {
+            path: "/cart",
+            element: <Cart />
+        }
+    ])
+  return element
+}
+
+export default AllRoutes

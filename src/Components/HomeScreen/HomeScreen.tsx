@@ -1,18 +1,20 @@
 import React from 'react'
+import Categories from '../Category/Categories'
 import Discover from '../Discover/Discover'
-import Expolore from '../Exploring/Expolore'
-import Filter from '../Filter/Filter'
-import Hero from '../Hero/Hero'
-import Product from '../Product/Product'
+import Hero from '../Home/Hero/Hero'
+import SpecialKids from '../SpecialKids/SpecialKids'
+import Filter from './Filter/Filter'
+import NewArrivals from './NewArrivals/NewArrivals'
 
 const HomeScreen = () => {
   return (
-    <div >
-        <Hero/>
-        <Discover/>
-        <Product/>
-        <Filter/>
-        <Expolore/>
+    <div>
+    <Hero/>
+    <Discover />
+    <NewArrivals />
+    <Filter />
+    <Categories />
+    <SpecialKids />
     </div>
   )
 }

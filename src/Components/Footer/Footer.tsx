@@ -18,7 +18,7 @@ const Footer = () => {
        
 
         <First>
-            <Logo>Valerian</Logo>
+            <Logo>VALERIAN</Logo>
 
             <Soc>
                 <Socials src={facebook}/>

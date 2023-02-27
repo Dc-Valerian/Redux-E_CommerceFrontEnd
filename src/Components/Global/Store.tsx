@@ -1,39 +1,45 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
-import {
-	persistStore,
-	persistReducer,
-	FLUSH,
-	REHYDRATE,
-	PAUSE,
-	PERSIST,
-	PURGE,
-	REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
 import myReducer from "./ReduxState";
-import { TypedUseSelectorHook, useSelector } from "react-redux/es/exports";
+import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
+import { configureStore } from '@reduxjs/toolkit'
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import { PersistGate } from 'redux-persist/integration/react'
 
 const persistConfig = {
-	key: "ecomerece06",
+	key: 'Ecommerce',
 	version: 1,
 	storage,
-};
-
-const persistedReducer = persistReducer(persistConfig, myReducer);
-
-
+  }
+  
+const persistedReducer = persistReducer(persistConfig, myReducer)
 
 export const store = configureStore({
-	reducer: {
-		myReducer,
-	},
-});
+	reducer: persistedReducer,
+	middleware: (getDefaultMiddleware) =>
+	  getDefaultMiddleware({
+		serializableCheck: {
+		  ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+		},
+	  }),
+  })
 
-// define your despatch and selector
+// export const store = configureStore({
+// 	reducer: {
+// 		myReducer
+// 	}
+// });
 
-export const UseAppDispach: () => typeof store.dispatch = useDispatch;
+// Define your dispatch and your selector
 
-export const useAppSelector: TypedUseSelectorHook<
-	ReturnType<typeof store.getState>
-> = useSelector;
+export const useAppDispatch: () => typeof store.dispatch = useDispatch;
+
+export const useAppSelector: TypedUseSelectorHook<ReturnType<typeof store.getState>> = useSelector;

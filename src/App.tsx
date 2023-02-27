@@ -1,18 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import AllRoutes from './Components/AllRoutes/AllRoutes';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
+import React from 'react'
+import AllRoutes from './Components/AllRoutes/AllRoutes'
+import Footer from './Components/Footer/Footer'
+import Header from './Components/Header/Header'
+import HomeScreen from './Components/Homescreen/HomeScreen'
 
-
-function App() {
+const App = () => {
   return (
     <div>
-      <Header/>
-      <AllRoutes/>
-      <Footer/>
+      <Header />
+      <AllRoutes />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
